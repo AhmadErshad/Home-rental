@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/search_field.dart';
+import '../widgets/select_category.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -35,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () {},
               icon: Icon(
                 Icons.notifications,
-                color: Colors.green.shade600,
+                color: Colors.grey.shade600,
               ),
             ),
           ]),
@@ -44,8 +45,14 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
-            children: [
-              SearchField()
+            children: const [
+              // use widget 
+              SearchField(),
+              SelectCategory(),
+              SizedBox(
+                height: 20.0,
+                
+              ),
             ],
           ),
         ),
