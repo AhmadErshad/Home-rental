@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/search_field.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -21,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Icons.location_on,
               color: Colors.blue.shade600,
             ),
-            Text(
+            const Text(
               "Herat, Afghanistan",
               style: TextStyle(
                 color: Colors.black,
@@ -42,17 +44,22 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
-            children: [],
+            children: [
+              SearchField()
+            ],
           ),
         ),
       ),
+
+      // add bottom navigation bar
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0.0,
         backgroundColor: Colors.white,
-        selectedItemColor: Colors.black,
+        selectedItemColor: Colors.blue.shade600,
         unselectedItemColor: Colors.grey.shade600,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.home), label: "Home"),
           BottomNavigationBarItem(
               icon: Icon(CupertinoIcons.search), label: "Search"),
           BottomNavigationBarItem(
