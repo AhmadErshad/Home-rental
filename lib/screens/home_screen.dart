@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../models/item_model.dart';
 import '../widgets/search_field.dart';
 import '../widgets/select_category.dart';
+import '../widgets/suggestion_list.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -45,14 +47,15 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
-            children: const [
+            children: [
               // use widget 
-              SearchField(),
-              SelectCategory(),
-              SizedBox(
+              const SearchField(),
+              const SelectCategory(),
+              const SizedBox(
                 height: 20.0,
-                
+
               ),
+              SuggestionList("Recommendation for you", Item.recommendation),
             ],
           ),
         ),

@@ -1,12 +1,12 @@
 class Item {
   String? title;
   String? category;
-  String? thump_url;
+  String? thumbUrl;
   String? location;
   double? price;
 
 // item constructor
-  Item(this.title, this.category, this.location, this.price, this.thump_url);
+  Item(this.title, this.category, this.location, this.price, this.thumbUrl);
 
   static List<Item> recommendation = [
     Item("Modern House for Renting", "House", "Georgia, USA", 2500,
