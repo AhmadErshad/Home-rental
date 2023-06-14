@@ -56,6 +56,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
               ),
               SuggestionList("Recommendation for you", Item.recommendation),
+              const SizedBox(
+                height: 20.0,
+              ),
+              SuggestionList("Nearby you", Item.nearby),
             ],
           ),
         ),

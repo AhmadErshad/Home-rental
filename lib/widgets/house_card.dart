@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/item_model.dart';
 
+// ignore: must_be_immutable
 class ItemCard extends StatefulWidget {
   ItemCard(this.item, this.onTap, {super.key});
 
@@ -32,7 +33,7 @@ class _ItemCardState extends State<ItemCard> {
             children: [
               Container(
                 width: double.infinity,
-                height: 140.0,
+                height: 145.0,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   color: Colors.green.shade200,

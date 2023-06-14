@@ -9,18 +9,18 @@ class Item {
   Item(this.title, this.category, this.location, this.price, this.thumbUrl);
 
   static List<Item> recommendation = [
-    Item("Modern House for Renting", "House", "first Region, Herat", 2500,
-        "./images/home1.jpg"),
-    Item("Big Villa", "Villa", "Engil, Herat", 3000, "images/villa1.jpg"),
-    Item("Small House", "House", "Karokh, Herat", 1500, "./images/home1.jpg"),
+    Item("Modern House for Renting", "House", "1st Region, Herat", 2500,
+        "./images/home2.jpg"),
+    Item("Big Villa", "Villa", "Engil District, Herat", 3000, "images/villa2.jpg"),
+    Item("Small House", "House", "Darb Khosh, Herat", 1500, "./images/home2.jpg"),
     Item("Luxios Apartment", "Apartment", "Mostufiat, Herat", 800,
         "./images/apartment1.jpg")
   ];
 
   static List<Item> nearby = [
-    Item("Student Apartment", "Apartment", "Tunis, Tonsia", 150, "images/"),
-    Item("Small Villa", "Villa", "Tunis, Tunsia", 300, "images/"),
-    Item("Family House", "House", "Manouba, Tunis", 200, "images/"),
-    Item("Province House", "House", "Kef, Tunis", 100, "images/"),
+    Item("Student Apartment", "Apartment", "Number 1, Herat", 150, "./images/apartment1.jpg"),
+    Item("Small Villa", "Villa", "6th Region, Herat", 300, "./images/villa1.jpg"),
+    Item("Family House", "House", "Farhang Street, Herat", 200, "./images/home2.jpg"),
+    Item("Province House", "House", "Kowser Street, Herat", 100, "./images/town_house.jpg"),
   ];
 }
