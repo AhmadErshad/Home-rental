@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_rental/widgets/house_card.dart';
 
 import '../models/item_model.dart';
 
@@ -30,14 +31,21 @@ class _SuggestionListState extends State<SuggestionList> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 12.0,
           ),
           Container(
             height: 340.0,
             width: double.infinity,
             // use card widget
-            // child: ListView.builder(scrollDirection: Axis.horizontal, itemCount: widget.items.length, itemBuilder: (context, index) =>{},),
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: widget.items.length,
+              itemBuilder: (context, index) => ItemCard(
+                widget.items[index],
+                () {},
+              ),
+            ),
           ),
         ],
       ),

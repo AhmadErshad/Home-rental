@@ -9,12 +9,12 @@ class Item {
   Item(this.title, this.category, this.location, this.price, this.thumbUrl);
 
   static List<Item> recommendation = [
-    Item("Modern House for Renting", "House", "Georgia, USA", 2500,
-        "images/home1.jpg"),
-    Item("Big Villa", "Villa", "Miami, USA", 3000, "images/villa1.jpg"),
-    Item("Small House", "House", "Wesex, London", 1500, "images/smHouse1.jpg"),
-    Item("Luxios Apartment", "Apartment", "New Yourk, USA", 800,
-        "images/apartment1.jpg")
+    Item("Modern House for Renting", "House", "first Region, Herat", 2500,
+        "./images/home1.jpg"),
+    Item("Big Villa", "Villa", "Engil, Herat", 3000, "images/villa1.jpg"),
+    Item("Small House", "House", "Karokh, Herat", 1500, "./images/home1.jpg"),
+    Item("Luxios Apartment", "Apartment", "Mostufiat, Herat", 800,
+        "./images/apartment1.jpg")
   ];
 
   static List<Item> nearby = [
