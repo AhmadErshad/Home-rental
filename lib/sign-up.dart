@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:home_rental/screens/home_screen.dart';
-import 'package:home_rental/sign-up.dart';
+import 'package:home_rental/main.dart';
 
 void main() {
   runApp(
     const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: SignUpPage(),
     ),
   );
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -75,14 +74,35 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     children: [
                       const Text(
-                        "Login",
+                        "Sign Up",
                         style: TextStyle(
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold,
-                        ),
+                            fontSize: 40, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(
                         height: 40,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.only(left: 10),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          border: Border.all(color: Colors.blue),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: const [
+                            BoxShadow(
+                                color: Color.fromRGBO(27, 50, 225, 0.3),
+                                blurRadius: 20,
+                                offset: Offset(0, 10)),
+                          ],
+                        ),
+                        child: const TextField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "Username",
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
                       ),
                       Container(
                         padding: const EdgeInsets.only(left: 10),
@@ -123,7 +143,30 @@ class HomePage extends StatelessWidget {
                         child: const TextField(
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            hintText: "Password",
+                            hintText: "password",
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.only(left: 10),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          border: Border.all(color: Colors.blue),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: const [
+                            BoxShadow(
+                                color: Color.fromRGBO(27, 50, 225, 0.3),
+                                blurRadius: 20,
+                                offset: Offset(0, 10)),
+                          ],
+                        ),
+                        child: const TextField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "re-password",
                           ),
                         ),
                       ),
@@ -141,13 +184,13 @@ class HomePage extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const HomeScreen(),
+                                builder: (context) => const HomePage(),
                               ),
                             );
                           },
                           child: const Center(
                               child: Text(
-                            "Login",
+                            "Sign Up",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 16,
@@ -160,14 +203,19 @@ class HomePage extends StatelessWidget {
                           const SizedBox(
                             height: 60,
                           ),
-                          const Text("Don't have account?"),
+                          const Text("Already have account?"),
                           InkWell(
-                            child: const Text(" Create Account", style: TextStyle(color: Colors.blue,),),
+                            child: const Text(
+                              " Login",
+                              style: TextStyle(
+                                color: Colors.blue,
+                              ),
+                            ),
                             onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const SignUpPage(),
+                                  builder: (context) => const HomePage(),
                                 ),
                               );
                             },
