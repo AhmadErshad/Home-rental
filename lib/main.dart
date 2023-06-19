@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:home_rental/screens/home_screen.dart';
 import 'package:home_rental/sign-up.dart';
+
+import 'home.dart';
 
 void main() {
   runApp(
@@ -141,7 +142,7 @@ class HomePage extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const HomeScreen(),
+                                builder: (context) => const Home(),
                               ),
                             );
                           },

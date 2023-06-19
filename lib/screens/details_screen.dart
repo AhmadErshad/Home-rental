@@ -22,7 +22,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
         iconTheme: const IconThemeData(color: Colors.blueAccent),
         title: Text(
           widget.item.title!,
-          style: const TextStyle(color: Colors.black),
+          style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
       ),
       body: Padding(

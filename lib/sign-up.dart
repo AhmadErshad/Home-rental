@@ -1,5 +1,7 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:home_rental/main.dart';
+import './main.dart';
 
 void main() {
   runApp(
@@ -81,23 +83,25 @@ class SignUpPage extends StatelessWidget {
                       const SizedBox(
                         height: 40,
                       ),
-                      Container(
-                        padding: const EdgeInsets.only(left: 10),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: Border.all(color: Colors.blue),
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Color.fromRGBO(27, 50, 225, 0.3),
-                                blurRadius: 20,
-                                offset: Offset(0, 10)),
-                          ],
-                        ),
-                        child: const TextField(
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: "Username",
+                      SingleChildScrollView(
+                        child: Container(
+                          padding: const EdgeInsets.only(left: 10),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(color: Colors.blue),
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: const [
+                              BoxShadow(
+                                  color: Color.fromRGBO(27, 50, 225, 0.3),
+                                  blurRadius: 20,
+                                  offset: Offset(0, 10)),
+                            ],
+                          ),
+                          child: const TextField(
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: "Username",
+                            ),
                           ),
                         ),
                       ),

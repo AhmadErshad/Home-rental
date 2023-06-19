@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../models/item_model.dart';
@@ -64,26 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-
-      // add bottom navigation bar
-      bottomNavigationBar: BottomNavigationBar(
-        elevation: 0.0,
-        backgroundColor: Colors.white,
-        selectedItemColor: Colors.blue.shade600,
-        unselectedItemColor: Colors.grey.shade600,
-        items: const [
-          BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.home), label: "Home"),
-          BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.search), label: "Search"),
-          BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.heart), label: "Favorites"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.message_outlined), label: "Messages"),
-          BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.person), label: "Profile"),
-        ],
-      ),
     );
   }
+  
 }
