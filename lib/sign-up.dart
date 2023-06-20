@@ -18,52 +18,52 @@ class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        padding: const EdgeInsets.symmetric(vertical: 30),
-        width: double.infinity,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            colors: [
-              Colors.blue.shade900,
-              Colors.blue.shade800,
-              Colors.blue.shade400,
-            ],
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 30),
+          width: double.infinity,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              colors: [
+                Colors.blue.shade900,
+                Colors.blue.shade800,
+                Colors.blue.shade400,
+              ],
+            ),
           ),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(
-              height: 20,
-            ),
-            const Padding(
-              padding: EdgeInsets.all(20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Welcome To",
-                    style: TextStyle(
-                        color: Colors.white60,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    "Rental App",
-                    style: TextStyle(
-                        color: Colors.white60,
-                        fontSize: 35,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ],
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 20,
               ),
-            ),
-            const SizedBox(
-              height: 80,
-            ),
-            Expanded(
-              child: Container(
+              const Padding(
+                padding: EdgeInsets.all(20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Welcome To",
+                      style: TextStyle(
+                          color: Colors.white60,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "Rental App",
+                      style: TextStyle(
+                          color: Colors.white60,
+                          fontSize: 35,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 80,
+              ),
+              Container(
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -75,116 +75,129 @@ class SignUpPage extends StatelessWidget {
                   padding: const EdgeInsets.all(20),
                   child: Column(
                     children: [
+                      const SizedBox(
+                        height: 40,
+                      ),
                       const Text(
                         "Sign Up",
                         style: TextStyle(
                             fontSize: 40, fontWeight: FontWeight.bold),
                       ),
-                      const SizedBox(
-                        height: 40,
-                      ),
+                      
                       SingleChildScrollView(
                         child: Container(
-                          padding: const EdgeInsets.only(left: 10),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            border: Border.all(color: Colors.blue),
-                            borderRadius: BorderRadius.circular(20),
-                            boxShadow: const [
-                              BoxShadow(
-                                  color: Color.fromRGBO(27, 50, 225, 0.3),
-                                  blurRadius: 20,
-                                  offset: Offset(0, 10)),
+                          margin: const EdgeInsets.only(left: 0),
+                          padding: const EdgeInsets.all(10),
+                          child: Column(
+                            children: [
+                              const SizedBox(
+                                height: 50,
+                              ),
+                              Form(
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      margin: const EdgeInsets.all(15),
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          label: const Text("Username"),
+                                          prefixIcon: Icon(
+                                            Icons.person_outline,
+                                            color: Colors.blue.shade600,
+                                          ),
+                                          border: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.blue.shade600,
+                                              style: BorderStyle.solid,
+                                            ),
+                                            borderRadius:
+                                                const BorderRadius.all(
+                                              Radius.circular(20),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: const EdgeInsets.all(15),
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          label: const Text("Email"),
+                                          prefixIcon: Icon(
+                                            Icons.mail_outline,
+                                            color: Colors.blue.shade600,
+                                          ),
+                                          border: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.blue.shade600,
+                                              style: BorderStyle.solid,
+                                            ),
+                                            borderRadius:
+                                                const BorderRadius.all(
+                                              Radius.circular(20),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: const EdgeInsets.all(15),
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          label: const Text("Password"),
+                                          prefixIcon: Icon(
+                                            Icons.fingerprint_outlined,
+                                            color: Colors.blue.shade600,
+                                          ),
+                                          border: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.blue.shade600,
+                                              style: BorderStyle.solid,
+                                            ),
+                                            borderRadius:
+                                                const BorderRadius.all(
+                                              Radius.circular(20),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: const EdgeInsets.all(15),
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          label: const Text("Re Password"),
+                                          prefixIcon: Icon(
+                                            Icons.fingerprint_outlined,
+                                            color: Colors.blue.shade600,
+                                          ),
+                                          border: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.blue.shade600,
+                                              style: BorderStyle.solid,
+                                            ),
+                                            borderRadius:
+                                                const BorderRadius.all(
+                                              Radius.circular(20),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ],
                           ),
-                          child: const TextField(
-                            decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: "Username",
-                            ),
-                          ),
                         ),
-                      ),
-                      const SizedBox(
-                        height: 20,
                       ),
                       Container(
-                        padding: const EdgeInsets.only(left: 10),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: Border.all(color: Colors.blue),
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Color.fromRGBO(27, 50, 225, 0.3),
-                                blurRadius: 20,
-                                offset: Offset(0, 10)),
-                          ],
-                        ),
-                        child: const TextField(
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: "Email",
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Container(
-                        padding: const EdgeInsets.only(left: 10),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: Border.all(color: Colors.blue),
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Color.fromRGBO(27, 50, 225, 0.3),
-                                blurRadius: 20,
-                                offset: Offset(0, 10)),
-                          ],
-                        ),
-                        child: const TextField(
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: "password",
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Container(
-                        padding: const EdgeInsets.only(left: 10),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: Border.all(color: Colors.blue),
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Color.fromRGBO(27, 50, 225, 0.3),
-                                blurRadius: 20,
-                                offset: Offset(0, 10)),
-                          ],
-                        ),
-                        child: const TextField(
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: "re-password",
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 40,
-                      ),
-                      Container(
+                      margin: const EdgeInsets.all(15),
+                      child: SizedBox(
+                        width: double.infinity,
                         height: 50,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.blue.shade700,
-                        ),
-                        child: InkWell(
-                          onTap: () {
+                        child: ElevatedButton(
+                          onPressed: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -192,46 +205,49 @@ class SignUpPage extends StatelessWidget {
                               ),
                             );
                           },
-                          child: const Center(
-                              child: Text(
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.blue.shade600,
+                              side: BorderSide.none,
+                              shape: const StadiumBorder()),
+                          child: const Text(
                             "Sign Up",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold),
-                          )),
+                            style: TextStyle(color: Colors.white, fontSize: 18),
+                          ),
                         ),
                       ),
+                    ),
                       Row(
                         children: [
                           const SizedBox(
                             height: 60,
                           ),
                           const Text("Already have account?"),
-                          InkWell(
-                            child: const Text(
-                              " Login",
-                              style: TextStyle(
-                                color: Colors.blue,
-                              ),
-                            ),
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const HomePage(),
-                                ),
-                              );
-                            },
+                          ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blueAccent.withOpacity(.1),
+                            elevation: 0,
+                            foregroundColor: Colors.blue,
+                            shape: const StadiumBorder(),
+                            side: BorderSide.none
                           ),
+                          child: const Text("Login"),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const HomePage(),
+                              ),
+                            );
+                          },
+                        ),
                         ],
                       ),
                     ],
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

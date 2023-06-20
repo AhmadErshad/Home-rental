@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'screens/favorite_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/message_screen.dart';
-import 'screens/profile_screen.dart';
+import 'screens/profile/profile_screen.dart';
 import 'screens/search_screen.dart';
 
 class Home extends StatefulWidget {

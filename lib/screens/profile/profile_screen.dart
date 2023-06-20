@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'update_profile_screen.dart';
+
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
@@ -18,11 +20,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
         iconTheme: const IconThemeData(color: Colors.blueAccent),
         toolbarHeight: 80.0,
         title: Container(
-          margin: const EdgeInsets.only(left: 100),
+          margin: const EdgeInsets.only(left: 80),
           child: const Text(
             " Profile",
             style: TextStyle(
               color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontSize: 25
             ),
           ),
         ),
@@ -31,15 +35,39 @@ class _ProfileScreenState extends State<ProfileScreen> {
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            SizedBox(
-              width: 120,
-              height: 120,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(100),
-                child: const Image(
-                  image: AssetImage("./images/profile.jpg"),
+            Stack(
+              children: [
+                SizedBox(
+                  width: 120,
+                  height: 120,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(100),
+                    child: const Image(
+                      image: AssetImage("./images/profile.jpg"),
+                    ),
+                  ),
                 ),
-              ),
+                Positioned(
+                  bottom: 0,
+                  right: 0,
+                  child: Container(
+                    margin: const EdgeInsets.only(
+                      left: 30,
+                    ),
+                    width: 35,
+                    height: 35,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      color: Colors.blue.shade600,
+                    ),
+                    child: const Icon(
+                      CupertinoIcons.pencil,
+                      color: Colors.white,
+                      size: 25,
+                    ),
+                  ),
+                ),
+              ],
             ),
             const SizedBox(
               height: 10,
@@ -58,9 +86,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
               height: 20,
             ),
             SizedBox(
-              width: 200,
+              width: 220,
+              height: 50,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const UpdateProfileScreen(),
+                    ),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue.shade600,
                     side: BorderSide.none,
@@ -69,6 +105,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   "Edit Profile",
                   style: TextStyle(
                     color: Colors.white,
+                    fontSize: 18
                   ),
                 ),
               ),
@@ -90,15 +127,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ProfileMenuWidget(
               title: "Billing Details",
               icon: Icons.wallet,
-              onPressed: (){},
+              onPressed: () {},
             ),
             ProfileMenuWidget(
               title: "User Management",
-              icon: CupertinoIcons.check_mark,
+              icon: CupertinoIcons.person_crop_circle_badge_checkmark,
               onPressed: () {},
             ),
             const Divider(),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             ProfileMenuWidget(
               title: "Information",
               icon: Icons.info,
@@ -109,7 +148,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
               icon: Icons.logout,
               textColor: Colors.red,
               endIcon: false,
-              onPressed: () {},),
+              onPressed: () {},
+            ),
           ],
         ),
       ),
@@ -156,7 +196,7 @@ class ProfileMenuWidget extends StatelessWidget {
         title,
         style: TextStyle(
           fontSize: 18,
-          color: endIcon == true ?Colors.black : textColor,
+          color: endIcon == true ? Colors.black : textColor,
           fontWeight: FontWeight.w500,
         ),
       ),
