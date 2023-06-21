@@ -23,4 +23,6 @@ class Item {
     Item("Family House", "House", "Farhang Street, Herat", 200, "./images/home2.jpg"),
     Item("Province House", "House", "Kowser Street, Herat", 100, "./images/town_house.jpg"),
   ];
+    List<Item> displayList = List.from([recommendation, nearby]);
+
 }
